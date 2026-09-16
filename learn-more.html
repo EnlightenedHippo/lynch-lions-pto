@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lynch Lion Pride PTO</title>
+  <meta name="theme-color" content="#f7f2ea">
+  <style>
+    :root {
+      --navy: #23344e;
+      --gold: #f2b233;
+      --cream: #f7f2ea;
+      --red: #ff3b30;
+      --text: #243244;
+      --muted: #5c6b7d;
+      --card: #ffffff;
+      --line: #e8e0d2;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; background: var(--cream); color: var(--text); }
+    body { line-height: 1.6; }
+    .wrap { width: min(1080px, calc(100% - 32px)); margin: 0 auto; }
+    .hero { padding: 40px 0 28px; text-align: center; position: relative; overflow: hidden; }
+    .hero::before, .hero::after { content: ""; position: absolute; border-radius: 999px; opacity: 0.18; z-index: 0; }
+    .hero::before { width: 220px; height: 220px; background: var(--gold); top: -90px; left: -60px; }
+    .hero::after { width: 260px; height: 260px; background: #d8e4f5; bottom: -120px; right: -90px; }
+    .hero-inner { position: relative; z-index: 1; }
+    .eyebrow { display: inline-block; background: white; border: 2px solid var(--line); color: var(--navy); border-radius: 999px; padding: 8px 14px; font-size: 14px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 20px; }
+    h1 { margin: 0 auto 18px; max-width: 900px; color: var(--red); font-size: clamp(40px, 8vw, 82px); line-height: 0.95; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; }
+    .paw-row { font-size: 42px; letter-spacing: 18px; margin: 6px 0 18px; color: var(--navy); }
+    .hero-copy { max-width: 780px; margin: 0 auto 26px; font-size: clamp(18px, 2.4vw, 24px); color: var(--muted); }
+    .button-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-bottom: 14px; }
+    .btn { display: inline-block; padding: 15px 26px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 17px; transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease; box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+    .btn:hover, .btn:focus { transform: translateY(-2px); }
+    .btn-primary { background: var(--navy); color: white; }
+    .btn-secondary { background: var(--gold); color: #1d2a3f; }
+    .section { padding: 20px 0 36px; }
+    .grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 24px; align-items: start; }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 28px; box-shadow: 0 10px 30px rgba(24, 43, 72, 0.06); }
+    h2 { margin: 0 0 14px; font-size: 30px; color: var(--navy); line-height: 1.1; }
+    .lead { margin: 0; color: var(--muted); font-size: 18px; }
+    .quick-list { margin: 18px 0 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+    .quick-list li { background: #fcfaf6; border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; }
+    .quick-list strong { color: var(--navy); display: block; margin-bottom: 4px; }
+    .faq-header { margin-bottom: 18px; }
+    .faq-item { background: white; border: 1px solid var(--line); border-radius: 16px; margin-bottom: 14px; overflow: hidden; }
+    details summary { list-style: none; cursor: pointer; padding: 18px 20px; font-weight: 700; color: var(--navy); position: relative; padding-right: 52px; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary::after { content: "+"; position: absolute; right: 18px; top: 50%; transform: translateY(-50%); font-size: 28px; line-height: 1; color: var(--gold); font-weight: 400; }
+    details[open] summary::after { content: "–"; }
+    .faq-answer { padding: 0 20px 20px; color: var(--text); }
+    .faq-answer p { margin: 0 0 12px; }
+    .faq-answer a { color: var(--navy); font-weight: 700; }
+    .mission { background: linear-gradient(135deg, #fff, #fff7df); border: 1px solid #f1e3b2; }
+    .mission blockquote { margin: 16px 0 0; padding-left: 16px; border-left: 4px solid var(--gold); color: var(--text); font-size: 18px; }
+    .cta-band { background: var(--navy); color: white; border-radius: 22px; padding: 28px; text-align: center; margin: 10px 0 50px; }
+    .cta-band h3 { margin: 0 0 10px; font-size: 30px; }
+    .cta-band p { margin: 0 0 18px; color: rgba(255,255,255,0.86); font-size: 17px; }
+    .footer { text-align: center; color: var(--muted); font-size: 14px; padding: 0 0 30px; }
+    @media (max-width: 820px) {
+      .grid { grid-template-columns: 1fr; }
+      .card { padding: 22px; }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 20px, 1080px); }
+      .hero { padding-top: 26px; }
+      .button-row { flex-direction: column; }
+      .btn { width: 100%; }
+      .paw-row { font-size: 34px; letter-spacing: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <div class="eyebrow">M.A. Lynch Elementary Parent Group</div>
+      <h1>Welcome to the Lynch Lion Pride PTO Page!</h1>
+      <div class="paw-row" aria-hidden="true">🐾 🐾</div>
+      <p class="hero-copy">
+        We’re glad you’re here. Learn more about who we are, what we do,
+        and how you can get involved with the Lynch Lion Pride PTO.
+      </p>
+      <div class="button-row">
+        <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScPfGkPkZZxA5gNkK0UTTOKexyrxLGkb1Le_bJ6OQWVX0mlSA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Open the Google Form</a>
+        <a class="btn btn-secondary" href="#faq">Read the FAQ</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="section">
+      <div class="grid">
+        <div class="card">
+          <h2>About Lynch Lion Pride</h2>
+          <p class="lead">
+            The Lynch Lion Pride is the parent-teacher organization for M.A. Lynch.
+            Our goal is to help families connect, support teachers and staff, and build
+            a stronger school community for our students.
+          </p>
+          <ul class="quick-list">
+            <li><strong>Meetings</strong>Every 2nd Monday of the month at 4:30 pm in the school library.</li>
+            <li><strong>What we do</strong>Family events, fundraisers, staff appreciation, teacher support, and volunteer opportunities.</li>
+            <li><strong>Get involved</strong>Fill out the interest form and connect with the PTO to learn how you'd like to help.</li>
+          </ul>
+        </div>
+
+        <div class="card mission">
+          <h2>Our Mission</h2>
+          <p class="lead">
+            We want to create opportunities for parents to connect, invest in their child’s school,
+            and build community between parents and teachers.
+          </p>
+          <blockquote>
+            “Our mission is to create opportunities for parents to connect with each other,
+            invest in their child’s school with their time, talents, resources, and build
+            community between parents and teachers to better help meet the needs of our school.”
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="faq-header">
+        <h2>Frequently Asked Questions</h2>
+        <p class="lead">Here are a few quick answers about the PTO.</p>
+      </div>
+
+      <div class="faq-item"><details open><summary>What is the LLP? Also known as the PTO / PTA / PTC?</summary><div class="faq-answer"><p>This is the Parent-Teacher Organization, formally called the <strong>Lynch Lion Pride</strong>.</p></div></details></div>
+      <div class="faq-item"><details><summary>When do we meet?</summary><div class="faq-answer"><p>Every 2nd Monday of the month at 4:30 pm in the school library.</p></div></details></div>
+      <div class="faq-item"><details><summary>What is the goal of the Lynch Lion Pride?</summary><div class="faq-answer"><p>Our goal is to create opportunities for parents to connect, invest in their child’s school, and build community between parents and teachers to better help meet the needs of our school.</p></div></details></div>
+      <div class="faq-item"><details><summary>What does the Lynch Lion Pride do?</summary><div class="faq-answer"><p>We carry out volunteer opportunities to relieve teacher and staff workloads, plan school-wide events to connect families, and run fundraisers that give back to teachers, staff, and students at M.A. Lynch.</p></div></details></div>
+      <div class="faq-item"><details><summary>How do I become a volunteer?</summary><div class="faq-answer"><p>Sign up on the school district website and get cleared to be on campus.</p><p><a href="https://www.redmondschools.org/volunteer" target="_blank" rel="noopener noreferrer">Volunteer Forms &amp; Approval Information</a></p></div></details></div>
+      <div class="faq-item"><details><summary>How do I get updates on events?</summary><div class="faq-answer"><p>Follow the PTO on Facebook and Instagram. Events are also published in the school’s monthly newsletter, the ROAR.</p></div></details></div>
+    </section>
+
+    <section class="cta-band">
+      <h3>Want to get involved?</h3>
+      <p>Use the Google Form to share your interest, ask questions, or connect with the PTO.</p>
+      <a class="btn btn-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLScPfGkPkZZxA5gNkK0UTTOKexyrxLGkb1Le_bJ6OQWVX0mlSA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Go to the Google Form</a>
+    </section>
+
+    <div class="footer">Lynch Lion Pride PTO · M.A. Lynch Elementary · Redmond, Oregon</div>
+  </main>
+</body>
+</html>
